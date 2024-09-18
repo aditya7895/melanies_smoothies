@@ -42,3 +42,8 @@ time_to_insert = st.button ('Submit')
 if time_to_insert:
     session.sql(my_insert_stmt).collect()
     st.success('Your Smoothie is delivered',icon=None )
+
+
+import requests
+fruityvice_response = requests.get("https://fruityvice.com/api/fruit/watermelon")
+st.text(fruityvice_response)
